@@ -1,0 +1,20 @@
+{
+  "name": "estoque-eventos",
+  "version": "2.0.0",
+  "description": "API de estoque orientada a eventos (Express + Supabase + RabbitMQ)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "worker:auditoria": "node workers/auditoria.js",
+    "worker:compras": "node workers/compras.js",
+    "worker:vitrine": "node workers/vitrine.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.1",
+    "amqplib": "^0.10.4",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1"
+  }
+}
